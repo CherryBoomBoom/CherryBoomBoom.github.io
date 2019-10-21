@@ -1,0 +1,57 @@
+{
+  "include": [
+    "src/*"
+  ],
+  // "compileOnSave": true,
+  "compilerOptions": {
+    "emitDecoratorMetadata": true, 
+    "baseUrl": ".",
+    "outDir": "./dist/static/js", 
+    // "rootDir": "./src", 
+    "paths": {
+      "@/*": ["*", "src/*"]
+    },
+    "jsx": "preserve",
+    "jsxFactory": "h",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "allowJs": true,
+    // "module": "esnext",
+    "target": "es6", 
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "lib": [
+      "dom",
+      "es5",
+      "es6",
+      "es7",
+      "es2015.promise"
+    ],
+    "sourceMap": true,
+    "pretty": true,
+
+    // "target": "es2017",
+    // "module": "commonjs",
+    // "strict": true, 
+    "noImplicitAny": false,
+    // "experimentalDecorators": true,
+    // "emitDecoratorMetadata": true,
+    "charset": "utf8",
+    // "allowJs": false,
+    // "pretty": true,
+    "noEmitOnError": false,
+    // "noUnusedLocals": true, x
+    // "noUnusedParameters": true, x
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "strictPropertyInitialization": false,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,//
+    "skipDefaultLibCheck": true,//
+    // "inlineSourceMap": true,
+    // "importHelpers": true
+  },
+  "exclude": [
+    "node_modules*"
+  ]
+}
