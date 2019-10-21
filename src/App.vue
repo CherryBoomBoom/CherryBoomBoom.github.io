@@ -1,5 +1,5 @@
 <template>
-  <div class="layout" id="app">
+  <div id="app">
     <div>
 			<Menu mode="horizontal" :theme="theme1" active-name="1">
         <MenuItem name="1">
@@ -35,7 +35,7 @@
 			<div class="logo">
 				<img src="https://i2.tiimg.com/700479/5ae4ce384fd00748.png">
 											<h1>krabby patty</h1>
-							<p>蟹黄包web框架原型机</p>
+							<h3>蟹黄包web框架原型机</h3>
 			</div>
 		</div>
   </div>
@@ -52,12 +52,16 @@ export default class App extends IVue {
 }
 </script>
 <style scoped>
+#app{
+	height:100%
+}
 #app .logo {
 	text-align: center;
-	background: #fff
+	background: #fff;
+	height:calc(100% - 60px)
 }
 #app .logo img {
-	height: 360px;
+	height: 260px;
 	width: auto;
 }
 #app .logo h1 {
