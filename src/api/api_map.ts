@@ -1,0 +1,33 @@
+export default {
+  project:{
+    baseUrl:'/project',
+    api:{
+      list:'/list',
+      create:'/create',
+      remove:'/remove',
+    }
+  },
+  controllerGroup:{
+    baseUrl:'/controllerGroup',
+    api:{
+      update:'/update',
+      list:'/list',
+      create:'/create',
+    }
+  },
+  param:{
+    baseUrl:'/param',
+    api:{
+      create:'/create',
+      listByApi:'/list/byApi',
+    }
+  },
+  api:{
+    baseUrl:'/api',
+    api:{
+      create:'/create',
+      update:'/update',
+      readById:'/readById',
+    }
+  }
+};
