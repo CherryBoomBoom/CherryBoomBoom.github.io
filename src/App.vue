@@ -52,14 +52,39 @@
               <b>模块化</b>和附带
               <b>智能提示</b>
             </p>
-						<h1>优势</h1>
-						<p># 组件\请求\工具Load在上下文中</p>
-						<p># 可以自定义loader及typings</p>
-						<p># 非常夸张的深层嵌套洋葱圈模型</p>
-						<p># 企图可拆分微服务模块</p>
-						<p># 自动重启以及更多的开放性api</p>
-						<p># 以约束定义规则</p>
-						<h1>安装及快速开始</h1>
+            <h1>优势</h1>
+            <p># 组件\请求\工具Load在上下文中</p>
+            <p># 可以自定义loader及typings</p>
+            <p># 非常夸张的深层嵌套洋葱圈模型</p>
+            <p># 企图可拆分微服务模块</p>
+            <p># 自动重启以及更多的开放性api</p>
+            <p># 以约束定义规则</p>
+            <h1>安装及快速开始</h1>
+            <div class="code">
+              <pre>{{code.init}}</pre>
+            </div>
+            <h1>目录树</h1>
+            <h2>标准目录</h2>
+            <p>常用的目录结构</p>
+            <div class="common-tree">
+              <Tree :data="fileTree_1"></Tree>
+            </div>
+            <h2>子模块目录</h2>
+            <p>业务需要有嵌套模块的目录结构,此时中间件也是嵌套的</p>
+            <div>
+              <Tree :data="fileTree_2"></Tree>
+            </div>
+						<h1>入口文件</h1>
+						<p>项目从这里开始,并启动一个蟹黄堡实例</p>
+						<div class="code">
+              <pre>{{code.app}}</pre>
+            </div>
+						<h1>Controller</h1>
+						<p>这里是路由和功能组合文件</p>
+						<p>我是用<b>[new Symbol()]</b>作为<b>Function</b>名称.因为我认为这里的索引是路由的地址,方法不应该被其他形式的调用</p>
+						<div class="code">
+              <pre>{{code.controller}}</pre>
+            </div>
           </div>
         </Col>
         <Col span="6">
@@ -72,9 +97,26 @@
 
 <script lang="ts">
 import { IVue, IComponent, IWatch } from './interface/vue'
+import code from './code'
 
 @IComponent({ components: {} })
 export default class App extends IVue {
+	code = code
+	fileTree_1 = [
+		{
+			title: '├module_1',
+			expand: true,
+			children: [{ title: '├controller' }, { title: '├service' }, { title: '├module_1.module.ts' }]
+		},
+		{
+			title: '├module_2',
+			expand: true,
+			children: [{ title: '├controller' }, { title: '├service' }, { title: '├module_2.module.ts' }]
+		},
+		{ title: '├base.module.ts' },
+		{ title: '├package.json' }
+	]
+	fileTree_2 = [{ title: '├controller' }, { title: '├service' }, { title: '├base.module.ts' }, { title: '├package.json' }]
 	mounted() {
 		console.log(1)
 	}
@@ -84,11 +126,12 @@ export default class App extends IVue {
 #app {
 	background: #4aa598;
 }
-#app .top-nav{
+#app .top-nav {
 	position: fixed;
-	top:0;
-	width:100%;
-	background: #fff
+	top: 0;
+	width: 100%;
+	background: #fff;
+	z-index: 2;
 }
 #content {
 	background: #fff;
@@ -98,12 +141,17 @@ export default class App extends IVue {
 	padding: 32px;
 	font-size: 14px;
 }
-#content h1,h2,h3 {
-	margin:16px 0
+#content h1,
+h2,
+h3 {
+	margin: 16px 0;
+}
+#content p {
+	margin-left: 8px;
 }
 #app .logo {
 	text-align: center;
-	margin-top:60px;
+	margin-top: 60px;
 }
 #app .logo img {
 	height: 260px;
@@ -128,5 +176,15 @@ export default class App extends IVue {
 	position: relative;
 	top: 15px;
 	left: 20px;
+}
+.common-tree {
+	min-height: 252px;
+}
+.code pre {
+	background: url(./img/code-block-bg.png) #f5f6f7;
+	width: 775px;
+	border-left: 3px solid black;
+	line-height: 24px;
+	font-size: 16px;
 }
 </style>
