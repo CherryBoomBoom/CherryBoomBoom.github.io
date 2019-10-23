@@ -8,6 +8,15 @@ Vue.use(Router);
 export default new Router({
   mode: "history",
   routes: [
+    {path:'/',redirect: '/krabby-patty/document'},
+    {
+      path: "/krabby-patty",
+      component: krabbyPatty,
+      redirect: '/krabby-patty/document',
+      children:[
+        {path: "document",component: krabbyPattyDocument},
+      ]
+    },
     {
       path: "*",
       component: notFound

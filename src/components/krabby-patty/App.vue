@@ -46,7 +46,7 @@ export default class App extends IVue {
 	]
 	fileTree_2 = [{ title: '├controller' }, { title: '├service' }, { title: '├base.module.ts' }, { title: '├package.json' }]
 	mounted() {
-		this.$router.push({path:'document'})
+		console.log('document');
 	}
 }
 </script>

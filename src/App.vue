@@ -12,8 +12,6 @@ import { IVue, IComponent, IWatch } from './interface/vue'
 export default class App extends IVue {
 
 	mounted() {
-		console.log(1)
-		this.$router.push({path:'krabby-patty/document'})
 	}
 }
 </script>
