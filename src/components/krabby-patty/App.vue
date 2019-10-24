@@ -1,14 +1,14 @@
 <template>
   <div id="krabby_patty">
     <div class="top-nav">
-      <Menu mode="horizontal" active-name="1">
-        <MenuItem name="1" to="/krabby-patty/document">
-          <Icon/>文档
+      <Menu mode="horizontal" :active-name="pathName" @on-select="goAndChangePath">
+        <MenuItem name="document">
+          <Icon />文档
         </MenuItem>
-        <MenuItem name="2">
-          <Icon/>历史改进
+        <MenuItem name="history">
+          <Icon />历史改进
         </MenuItem>
-        <Submenu name="3">
+        <Submenu name="subject">
           <template slot="title">
             <Icon />其他开源项目
           </template>
@@ -18,7 +18,7 @@
       </Menu>
     </div>
     <div id="content">
-			<router-view></router-view>
+      <router-view></router-view>
     </div>
   </div>
 </template>
@@ -29,6 +29,17 @@ import code from '../../code'
 
 @IComponent({ components: {} })
 export default class App extends IVue {
+	pathName = 'document'
+
+	get routerPath() {
+		let path = this.$route.path.split('/')
+		return path[path.length - 1]
+	}
+
+	@IWatch('routerPath')
+	changePath(path) {
+		this.pathName = path
+	}
 	code = code
 	fileTree_1 = [
 		{
@@ -45,8 +56,15 @@ export default class App extends IVue {
 		{ title: '├package.json' }
 	]
 	fileTree_2 = [{ title: '├controller' }, { title: '├service' }, { title: '├base.module.ts' }, { title: '├package.json' }]
+
+	goAndChangePath(name) {
+		if (this.routerPath !== name) {
+			this.$router.push({ path: name })
+			this.pathName = name
+		}
+	}
 	mounted() {
-		console.log('document');
+		this.pathName = this.routerPath
 	}
 }
 </script>
@@ -68,6 +86,7 @@ export default class App extends IVue {
 	margin: 0 auto;
 	padding: 32px;
 	font-size: 14px;
+	margin-top: 60px;
 }
 #krabby_patty #content h1,
 h2,
