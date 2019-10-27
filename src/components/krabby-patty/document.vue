@@ -93,6 +93,13 @@
               <pre>{{code.middleware.controller}}</pre>
             </div>
           </div>
+
+					<h1 id="model">Model</h1>
+					<p>这里是数据库实体</p>
+					<p>目前只支持mongoose的类型提醒</p>
+					<div class="code">
+              <pre>{{code.middleware.model}}</pre>
+            </div>
         </Col>
         <Col span="6">
           <div class="catalog">
@@ -124,7 +131,7 @@ import { IVue, IComponent, IWatch } from '../../interface/vue'
 import code from '../../code'
 
 @IComponent({ components: {} })
-export default class App extends IVue {
+export default class Document extends IVue {
 	code = code
 	fileTree_1 = [
 		{
@@ -149,7 +156,6 @@ export default class App extends IVue {
 <style scoped>
 #krabby_patty_document .logo {
 	text-align: center;
-	margin-top: 60px;
 }
 #krabby_patty_document .logo img {
 	height: 260px;

@@ -5,6 +5,7 @@ import krabbyPattyDocument from "../components/krabby-patty/document.vue";
 import colorPicker from "../components/color-picker/App.vue";
 import colorPickerHome from "../components/color-picker/home.vue";
 // import notFound from "../components/noFound.vue";
+import krabbyPattyHistory from "../components/krabby-patty/history.vue";
 
 Vue.use(Router);
 export default new Router({
@@ -17,6 +18,7 @@ export default new Router({
       redirect: '/krabby-patty/document',
       children:[
         {path: "document",component: krabbyPattyDocument},
+				{ path: "history", component: krabbyPattyHistory},
       ]
     },
     {
