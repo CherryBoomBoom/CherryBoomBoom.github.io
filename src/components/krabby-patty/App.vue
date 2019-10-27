@@ -14,6 +14,7 @@
           </template>
           <MenuItem name="3-1">拉比vue组件库</MenuItem>
           <MenuItem name="3-2">自动化测试框架</MenuItem>
+          <MenuItem name="3-2" to="/color-picker">配色卡</MenuItem>
         </Submenu>
       </Menu>
     </div>

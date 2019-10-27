@@ -2,7 +2,7 @@
     <div id="krabby_patty_document">
       <div>
         <div class="logo">
-          <img src="https://i2.tiimg.com/700479/5ae4ce384fd00748.png" />
+          <img src="../../img/humber.svg" />
           <h1>krabby patty</h1>
           <h3>蟹黄堡web框架原型机</h3>
         </div>

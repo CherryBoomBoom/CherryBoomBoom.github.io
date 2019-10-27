@@ -2,7 +2,9 @@ import Vue from "vue";
 import Router from "vue-router";
 import krabbyPatty from "../components/krabby-patty/App.vue";
 import krabbyPattyDocument from "../components/krabby-patty/document.vue";
-import notFound from "../components/noFound.vue";
+import colorPicker from "../components/color-picker/App.vue";
+import colorPickerHome from "../components/color-picker/home.vue";
+// import notFound from "../components/noFound.vue";
 
 Vue.use(Router);
 export default new Router({
@@ -18,8 +20,16 @@ export default new Router({
       ]
     },
     {
+      path: "/color-picker",
+      component: colorPicker,
+      redirect: '/color-picker/home',
+      children:[
+        {path: "home",component: colorPickerHome},
+      ]
+    },
+    {
       path: "*",
-      component: notFound
+      component: krabbyPatty
     }
   ]
 });

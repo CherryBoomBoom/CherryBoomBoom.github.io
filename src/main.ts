@@ -3,17 +3,20 @@ import App from "./App.vue";
 import router from "./router/index";
 import {store} from "./store";
 import iView from "iview";
+import LoadingBar from 'iview/src/components/loading-bar';
 import "iview/dist/styles/iview.css";
 import axios from './function/request'
 import VueAxios from 'vue-axios'
 Vue.use(VueAxios,axios);
-// import { Tabs, TabPane, Tag,DatePicker } from "element-ui";
-// import "element-ui/lib/theme-chalk/index.css";
 Vue.config.productionTip = false;
-// Vue.use(Tabs);
-// Vue.use(TabPane);
-// Vue.use(Tag);
-// Vue.use(DatePicker);
+router.beforeEach((to, from, next) => {
+  LoadingBar.start();
+  next();
+});
+
+router.afterEach(route => {
+  LoadingBar.finish();
+});
 Vue.use(iView);
 new Vue({
   el: "#app",
