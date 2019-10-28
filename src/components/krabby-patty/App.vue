@@ -44,6 +44,9 @@ export default class App extends IVue {
 	code = code
 	fileTree_1 = [
 		{
+			title: '├config',
+		},
+		{
 			title: '├module_1',
 			expand: true,
 			children: [{ title: '├controller' }, { title: '├service' }, { title: '├module_1.module.ts' }]
@@ -56,7 +59,7 @@ export default class App extends IVue {
 		{ title: '├base.module.ts' },
 		{ title: '├package.json' }
 	]
-	fileTree_2 = [{ title: '├controller' }, { title: '├service' }, { title: '├base.module.ts' }, { title: '├package.json' }]
+	fileTree_2 = [{ title: '├config' },{ title: '├controller' }, { title: '├service' }, { title: '├base.module.ts' }, { title: '├package.json' }]
 
 	goAndChangePath(name) {
 		if (this.routerPath !== name) {
