@@ -75,9 +75,32 @@ export default[
   { data: ['d6d8cb', 'f7d5b9', 'eab08a', 'ff9377', '8ba8a6'] },
   { data: ['d9d969', 'a14f75', '515264', 'b4a3c3', 'e4dbee'] },
   { data: ['b5cbf2', '69759d', 'ab897f', '934763', 'c6c3bc'] },
+  { data: ['f5e5c2', 'f6ecd6', 'f0c7be', 'e56f7e', 'f5c275'] },
+  { data: ['c7ac67', '492f1e', '476e6d', 'b4dbd6', 'c2b299'] },
+  { data: ['4a5128', '4a3f5d', '877a96', 'e6def6', 'bdc474'] },
+  { data: ['eef29e', 'eecf52', '8fbf96', 'c8e7c7', 'f5c9a2'] },
+  { data: ['3d4248', '626a6d', '7f9191', 'f4f0e7', 'c8d2ca'] },
+  { data: ['d2aca3', 'ebdfdf', '464b5e', 'e1a084', 'de6b58'] },
+  { data: ['e6dfd7', 'b8d8e3', '906d73', 'b69284', 'e7dbc3'] },
+  { data: ['d7d9d4', 'aaa297', '6c6e7a', 'c24b35', '382f28'] },
+  { data: ['cfcdd2', 'd3aabc', '7f7580', '768f72', 'd1e3a7'] },
+  { data: ['d6ebe7', 'e7eff7', 'd6cbe7', 'b596d6', '8cbabd'] },
+  { data: ['ddf0f6', 'a3d2f0', '658057', 'ffbfe9', 'cd205f'] },
+  { data: ['b8d0d2', 'fad3b6', 'aad9b7', '395848', '97c3aa'] },
+  { data: ['dbd4f5', '9b9abc', '6f6975', 'e0769a', 'f79a5d'] },
+  { data: ['e2e1dd', 'cab9b2', 'a36c67', '8faeb3', 'dcd2c9'] },
+  { data: ['9facbd', '7a644c', 'f3dfbe', 'ece373', '53363b'] },
+  { data: ['c1d3d3', 'e6b57b', 'ead7d3', 'e0c5e8', '7c6093'] },
+  { data: ['372b39', '866d6e', '57b7a5', 'c0dcd3', 'd3cfce'] },
+  { data: ['f8f3ed', 'ebe1a4', 'c3c031', 'f66539', 'fa9f73'] },
+  { data: ['dbf4f0', 'ece8dd', 'ebf39e', 'fd6c5e', 'abcfc5'] },
+  { data: ['cbd1a1', 'e3e3c9', 'e6afb4', 'a54369', 'ab818f'] },
 
 
   { data: ['d8e2ef', 'd1c4cf', '6e6267', 'de7a6e', 'f6d977', 'e5ebb7'] },
+
+
+  { data: ['1998db', '405c64', '92529e', 'c497d2', '87e4ec', 'efd01e', 'fcc6d6'] },
 
   { data: ['b4b9b5', '014c45', '716c4c', '969c32', 'b25462', 'ff5b52', 'a89d81', '494844'] },
   { data: ['272b58', '0e4d92', '00989d', '7e8d4c', 'ff5b52', 'ec8faa', 'ffde00', '82e0e0'] },
